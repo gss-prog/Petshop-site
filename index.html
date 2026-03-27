@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <title>Petshop</title>
@@ -15,160 +14,118 @@
 <body>
 
 <header>
+    <h1>Petshop Feliz</h1>
+
+    <nav>
+        <a href="#produtos">Produtos</a> |
+        <a href="#servicos">Serviços</a> |
+        <a href="#cadastro">Cadastro</a>
+    </nav>
+</header>
+
+<!-- CARROSSEL -->
 <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="racao.jpg" class="d-block w-100" alt="Ração">
+      <img src="racao.jpg" class="d-block w-100" alt="Ração para cachorro">
     </div>
     <div class="carousel-item">
-      <img src="brinquedo.jpg" class="d-block w-100" alt="Brinquedo">
+      <img src="brinquedo.jpg" class="d-block w-100" alt="Brinquedo para cachorro">
     </div>
     <div class="carousel-item">
-      <img src="shampoo.jpg" class="d-block w-100" alt="Shampoo">
+      <img src="shampoo.jpg" class="d-block w-100" alt="Shampoo para pets">
     </div>
   </div>
 </div>
 
-<h1>Petshop Amigo Fiel</h1>
+<section id="produtos">
+<h2>Produtos</h2>
 
-<nav>
-<a href="#acessorios">Acessórios</a> |
-<a href="#racoes">Rações</a> |
-<a href="#higiene">Higiene</a> |
-<a href="#servicos">Serviços</a>
-</nav>
+<img src="racao.jpg" alt="Ração para cachorro">
+<p>Ração para cachorro - R$ 50,00</p>
 
-<hr>
+<img src="racao-gatos.jpg" alt="Ração para gatos">
+<p>Ração para gatos - R$ 45,00</p>
 
-</header>
+<img src="brinquedo.jpg" alt="Brinquedo para cachorro">
+<p>Brinquedo - R$ 20,00</p>
 
+<img src="coleira.jpg" alt="Coleira para pets">
+<p>Coleira - R$ 30,00</p>
 
-<h2 id="acessorios">Acessórios</h2>
+<img src="roupa.jpg" alt="Roupa para cachorro">
+<p>Roupa - R$ 60,00</p>
 
-<table border="1">
+<img src="shampoo.jpg" alt="Shampoo para pets">
+<p>Shampoo - R$ 25,00</p>
 
-<tr>
+<img src="tapete.jpg" alt="Tapete higiênico">
+<p>Tapete higiênico - R$ 35,00</p>
 
-<td>
-<img src="imagens/roupa.jpg" alt="Roupa para cachorro">
-<p>Roupa para cachorro</p>
-<p>Roupa confortável para cães de pequeno porte.</p>
-<p>Valor: R$ 50,00</p>
-</td>
+<img src="fralda.jpg" alt="Fralda para pets">
+<p>Fralda - R$ 40,00</p>
 
-<td>
-<img src="imagens/brinquedo.jpg">
-<p>Brinquedo mordedor</p>
-<p>Brinquedo resistente para cães.</p>
-<p>Valor: R$ 30,00</p>
-</td>
+</section>
 
-</tr>
+<section id="servicos">
+<h2>Serviços</h2>
 
-</table>
+<p>Banho - R$ 40,00</p>
+<p>Tosa - R$ 50,00</p>
 
+</section>
 
-<hr>
+<section id="cadastro">
+<h2>Cadastro do Cliente e Pet</h2>
 
+<form onsubmit="enviarFormulario()">
 
-<h2 id="racoes">Rações não perecíveis</h2>
+<h3>Cliente</h3>
 
-<table border="1">
+<input type="text" placeholder="Nome" required><br><br>
+<input type="text" placeholder="Endereço" required><br><br>
+<input type="text" placeholder="CPF" required><br><br>
 
-<tr>
+Sexo:
+<input type="radio" name="sexo"> Masculino
+<input type="radio" name="sexo"> Feminino <br><br>
 
-<td>
-<img src="imagens/racao.jpg" alt="Ração">
-<p>Ração Premium para cães</p>
-<p>Ração nutritiva indicada para cães adultos.</p>
-<p>Valor: R$ 120,00</p>
-</td>
+<input type="tel" placeholder="Telefone" required><br><br>
+<input type="email" placeholder="Email" required><br><br>
 
-<td>
-<img src="imagens/racao-gatos.jpg">
-<p>Ração para gatos</p>
-<p>Ração balanceada para gatos de todas as idades.</p>
-<p>Valor: R$ 95,00</p>
-</td>
+<h3>Pet</h3>
 
-</tr>
+<input type="text" placeholder="Nome do Pet" required><br><br>
+<input type="text" placeholder="Raça" required><br><br>
+<input type="number" placeholder="Idade" required><br><br>
 
-</table>
+<h3>Serviço</h3>
 
+<input type="checkbox"> Banho
+<input type="checkbox"> Tosa <br><br>
 
-<hr>
+<h3>Agendamento</h3>
 
+<input type="radio" name="entrega"> Tele-busca
+<input type="radio" name="entrega"> Levar no local <br><br>
 
-<h2 id="higiene">Produtos de higiene e limpeza</h2>
+Data:
+<input type="date" required><br><br>
 
-<table border="1">
+Horário:
+<input type="time" required><br><br>
 
-<tr>
+<button type="submit">Enviar</button>
 
-<td>
-<img src="imagens/tapete.jpg">
-<p>Tapete higiênico</p>
-<p>Tapete absorvente para treinamento de cães.</p>
-<p>Valor: R$ 45,00</p>
-</td>
-
-<td>
-<img src="imagens/fralda.jpg" alt="Fralda para pets">
-<p>Fralda para pets</p>
-<p>Fralda descartável para cães e gatos.</p>
-<p>Valor: R$ 35,00</p>
-</td>
-
-</tr>
-
-</table>
-
-
-<hr>
-
-
-<h2 id="servicos">Serviços</h2>
-
-<table border="1">
-
-<tr>
-
-<td>
-<img src="imagens/banho.jpg" alt="Banho e tosa">
-<p><b>Banho e Tosa</b></p>
-<p>Serviço completo de banho e tosa para seu pet.</p>
-<p>Valor: R$ 60,00</p>
-</td>
-
-<td>
-<p><b>Banho e Tosa com Tele-busca</b></p>
-<p>Buscamos e levamos seu pet com segurança.</p>
-<p>Valor: R$ 80,00</p>
-</td>
-
-</tr>
-
-</table>
-
-
-<hr>
-
+</form>
+</section>
 
 <footer>
-
-<p><b>Petshop Amigo Fiel</b></p>
-<p>Autor: Gerson Senhorinho Silva</p>
-<p>Email: contato@petshop.com</p>
-
-<p>
-<a href="#acessorios">Acessórios</a> |
-<a href="#racoes">Rações</a> |
-<a href="#higiene">Higiene</a> |
-<a href="#servicos">Serviços</a>
-</p>
-
+<p>Contato: petshop@email.com</p>
+<p>Desenvolvido por Gerson Silva</p>
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
